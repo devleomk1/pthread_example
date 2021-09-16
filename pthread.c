@@ -6,7 +6,7 @@
 /*   By: jisokang <jisokang@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 15:01:34 by jisokang          #+#    #+#             */
-/*   Updated: 2021/09/15 15:22:50 by jisokang         ###   ########.fr       */
+/*   Updated: 2021/09/16 12:49:29 by jisokang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,16 @@
 #include <pthread.h>
 #include <stdlib.h>
 
-void	*routine(void)
+// thread_void : 스레드로 호출할 함수 파라미터를 void 포인터로 안주면 warning이 뜬다.
+static void	*routine(void *thread_void)
 {
+	int	*p;
+
+	p = (void *)thread_void;
 	printf("Hello Thread\n");
 	usleep(2000000);
 	printf("End thread\n");
+	return (0);
 }
 
 int	main(void)
