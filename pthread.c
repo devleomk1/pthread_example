@@ -6,7 +6,7 @@
 /*   By: jisokang <jisokang@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 15:01:34 by jisokang          #+#    #+#             */
-/*   Updated: 2021/09/16 18:04:15 by jisokang         ###   ########.fr       */
+/*   Updated: 2021/09/16 18:13:54 by jisokang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	*routine(void *thread_void)
 	return (0);
 }
 
-int	main(void)
+int	main(int argc, char **argv)
 {
 	pthread_t	t1;
 	pthread_t	t2;
