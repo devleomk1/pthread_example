@@ -6,7 +6,7 @@
 /*   By: jisokang <jisokang@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 15:01:34 by jisokang          #+#    #+#             */
-/*   Updated: 2021/09/16 14:33:53 by jisokang         ###   ########.fr       */
+/*   Updated: 2021/09/16 18:04:15 by jisokang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ int	main(void)
 
 	pthread_create(&t1, NULL, &routine, NULL);
 	pthread_create(&t2, NULL, &routine, NULL);
-	//pthread를 생성하는 순간 main문과는 별도로 routine()함수가 돌아간다.
+	//pthread를 생성하는 순간 main 스레드와는 별도로 routine()함수가 돌아간다.
 	usleep(1000000);
 	// pthread_join(t1, NULL);
 	// pthread_join(t2, NULL);
-	pthread_detach(t1);
-	pthread_detach(t2);
+	// pthread_detach(t1);
+	// pthread_detach(t2);
 
 	printf("THE END\n");
 	return (0);
