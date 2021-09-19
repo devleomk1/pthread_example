@@ -1,6 +1,4 @@
+*.out
 
 #general
 .DS_Store
-
-#
-*.out
