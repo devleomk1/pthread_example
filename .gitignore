@@ -1,1 +1,6 @@
+
+#general
+.DS_Store
+
+#
 *.out
